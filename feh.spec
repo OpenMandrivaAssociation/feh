@@ -93,7 +93,7 @@ EOF
 %_menudir/%name
 %_datadir/%name/fonts/*
 %_datadir/%name/images/*
-%_mandir/man1/%name.1.bz2
+%_mandir/man1/%name.*
 %_miconsdir/%name.png
 %_iconsdir/%name.png
 %_liconsdir/%name.png
