@@ -65,7 +65,7 @@ Exec=%{name} -c
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-Multimedia-Graphics
+Categories=X-MandrivaLinux-Multimedia-Graphics;
 EOF
 
 
