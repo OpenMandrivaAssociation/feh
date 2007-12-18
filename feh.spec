@@ -43,18 +43,6 @@ docs/homepage.
 %__rm -rf %buildroot
 %makeinstall
 
-mkdir -p %buildroot/%_menudir
-cat > %buildroot/%_menudir/%name << EOF
-?package(%name): \
-command="%_bindir/%name %_datadir/wallpapers/*" \
-needs="X11" \
-icon="%name.png" \
-section="%section" \
-title="%title" \
-longtitle="%Summary" \
-xdg="true"
-EOF
-
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
@@ -89,7 +77,6 @@ EOF
 %_bindir/*
 %defattr(0644,root,root,0755)
 %doc AUTHORS ChangeLog README TODO
-%_menudir/%name
 %_datadir/%name/fonts/*
 %_datadir/%name/images/*
 %_mandir/man1/%name.*
