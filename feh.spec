@@ -17,6 +17,7 @@ URL:            http://www.linuxbrit.co.uk/feh/
 Source0:        http://www.linuxbrit.co.uk/downloads/%name-%version.tar.bz2
 Source1:        %name-icons.tar.bz2
 
+BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:  imlib2-devel libxt-devel
 Buildrequires:  giblib-devel
 Buildrequires:  jpeg-devel 
