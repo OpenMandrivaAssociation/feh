@@ -1,6 +1,6 @@
 %define name    feh
 %define version 1.3.4
-%define release %mkrel 4
+%define release %mkrel 6
 
 %define section Multimedia/Graphics
 %define title   Feh
