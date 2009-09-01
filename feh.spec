@@ -17,6 +17,8 @@ URL:            http://www.linuxbrit.co.uk/feh/
 Source0:        http://www.linuxbrit.co.uk/downloads/%name-%version.tar.bz2
 Source1:        %name-icons.tar.bz2
 
+Patch0:         feh-1.3.4-str-fmt.patch
+
 BuildRoot:      %_tmppath/%name-buildroot
 Buildrequires:  imlib2-devel libxt-devel
 Buildrequires:  giblib-devel
@@ -32,6 +34,7 @@ docs/homepage.
 %prep
 %setup -q
 %setup -q -T -D -a1
+%patch0 -p1
 # Don't let make install install the doc-files.
 %__perl -pi -e 's,install-data-am: install-man install-docsDATA,install-data-am: install-man,' Makefile.in
 
