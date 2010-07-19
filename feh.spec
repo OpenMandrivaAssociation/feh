@@ -1,32 +1,22 @@
-%define name    feh
-%define version 1.3.4
-%define release %mkrel 8
-
-%define section Multimedia/Graphics
-%define title   Feh
-%define Summary Image viewer at heart, though it does other cool stuff
-
-Summary:        %Summary
-Name:           %name
-Version:        %version
-Release:        %release
+Summary:        Image viewer at heart, though it does other cool stuff
+Name:           feh
+Version:        1.8
+Release:        %mkrel 1
 License:        BSD
 Group:          Graphics
-URL:            http://www.linuxbrit.co.uk/feh/
+URL:            https://derf.homelinux.org/projects/feh/
 
-Source0:        http://www.linuxbrit.co.uk/downloads/%name-%version.tar.bz2
+Source0:        https://derf.homelinux.org/projects/feh/%{name}-%{version}.tar.bz2
 Source1:        %name-icons.tar.bz2
 
-Patch0:         feh-1.3.4-str-fmt.patch
-
 BuildRoot:      %_tmppath/%name-buildroot
-Buildrequires:  imlib2-devel libxt-devel
+Buildrequires:  imlib2-devel libxt-devel libxinerama-devel
 Buildrequires:  giblib-devel
 Buildrequires:  jpeg-devel 
 BuildRequires:  png-devel
 
 %description
-Feh is an imageviewer, but it does a whole lot of other cool stuff as
+Feh is an image viewer, but it does a whole lot of other cool stuff as
 well. There are simply too many to mention them here so please check the
 docs/homepage.
 
@@ -34,18 +24,18 @@ docs/homepage.
 %prep
 %setup -q
 %setup -q -T -D -a1
-%patch0 -p1
+
 # Don't let make install install the doc-files.
 %__perl -pi -e 's,install-data-am: install-man install-docsDATA,install-data-am: install-man,' Makefile.in
 
 %build
-%configure
-%make
+%setup_compile_flags
+%make DESTDIR=%buildroot PREFIX=/usr
 
 
 %install
 %__rm -rf %buildroot
-%makeinstall
+%make DESTDIR=%buildroot PREFIX=/usr install
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
@@ -87,7 +77,7 @@ EOF
 %doc AUTHORS ChangeLog README TODO
 %_datadir/%name/fonts/*
 %_datadir/%name/images/*
-%_mandir/man1/%name.*
+%_mandir/man1/*
 %_miconsdir/%name.png
 %_iconsdir/%name.png
 %_liconsdir/%name.png
