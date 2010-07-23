@@ -1,7 +1,7 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
 Version:        1.8
-Release:        %mkrel 1
+Release:        %mkrel 2
 License:        BSD
 Group:          Graphics
 URL:            https://derf.homelinux.org/projects/feh/
@@ -41,7 +41,7 @@ mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
 [Desktop Entry]
 Name=%{name}
-Comment=%{Summary}
+Comment=%{summary}
 Exec=%{name} -c
 Icon=%{name}
 Terminal=false
