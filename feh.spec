@@ -1,7 +1,7 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        1.8
-Release:        %mkrel 2
+Version:        1.9
+Release:        %mkrel 1
 License:        BSD
 Group:          Graphics
 URL:            https://derf.homelinux.org/projects/feh/
