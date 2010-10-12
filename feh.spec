@@ -1,6 +1,6 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        1.9
+Version:        1.10
 Release:        %mkrel 1
 License:        BSD
 Group:          Graphics
