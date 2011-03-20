@@ -1,8 +1,8 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        1.10
+Version:        1.12
 Release:        %mkrel 1
-License:        BSD
+License:        MIT
 Group:          Graphics
 URL:            https://derf.homelinux.org/projects/feh/
 
@@ -14,6 +14,7 @@ Buildrequires:  imlib2-devel libxt-devel libxinerama-devel
 Buildrequires:  giblib-devel
 Buildrequires:  jpeg-devel 
 BuildRequires:  png-devel
+BuildRequires:  curl-devel
 
 %description
 Feh is an image viewer, but it does a whole lot of other cool stuff as
@@ -25,13 +26,9 @@ docs/homepage.
 %setup -q
 %setup -q -T -D -a1
 
-# Don't let make install install the doc-files.
-%__perl -pi -e 's,install-data-am: install-man install-docsDATA,install-data-am: install-man,' Makefile.in
-
 %build
 %setup_compile_flags
 %make DESTDIR=%buildroot PREFIX=/usr
-
 
 %install
 %__rm -rf %buildroot
@@ -65,6 +62,8 @@ EOF
 %clean_menus
 %endif
 
+#let files section handle docs
+rm -rf %{buildroot}%{_docdir}%{name}
 
 %clean
 %__rm -rf %buildroot
@@ -74,7 +73,7 @@ EOF
 %defattr(0755,root,root,0755)
 %_bindir/*
 %defattr(0644,root,root,0755)
-%doc AUTHORS ChangeLog README TODO
+%doc AUTHORS ChangeLog README TODO examples
 %_datadir/%name/fonts/*
 %_datadir/%name/images/*
 %_mandir/man1/*
