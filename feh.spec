@@ -1,6 +1,6 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        2.3
+Version:        2.5
 Release:        1
 License:        MIT
 Group:          Graphics
