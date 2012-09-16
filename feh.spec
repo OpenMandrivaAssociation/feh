@@ -1,12 +1,11 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        2.5
+Version:        2.6.1
 Release:        1
 License:        MIT
 Group:          Graphics
 URL:            https://derf.homelinux.org/projects/feh/
-
-Source0:        https://derf.homelinux.org/projects/feh/%{name}-%{version}.tar.bz2
+Source0:	http://feh.finalrewind.org/%{name}-%{version}.tar.bz2
 Source1:        %{name}-icons.tar.bz2
 
 Buildrequires:  imlib2-devel libxt-devel libxinerama-devel
