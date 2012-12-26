@@ -1,6 +1,6 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        2.7
+Version:        2.8
 Release:        1
 License:        MIT
 Group:          Graphics
@@ -41,7 +41,6 @@ Terminal=false
 Type=Application
 Categories=X-MandrivaLinux-Multimedia-Graphics;
 EOF
-
 
 %__install -D -m 644 %{name}-48.png %{buildroot}%{_liconsdir}/%{name}.png
 %__install -D -m 644 %{name}-32.png %{buildroot}%{_iconsdir}/%{name}.png

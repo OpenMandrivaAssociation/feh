@@ -1,3 +1,5 @@
+removed_sources:
+  feh-2.7.tar.bz2: 25c3cf8af2d30b9cc176b36f2a78344ba9ae18f1
 sources:
-  "feh-2.7.tar.bz2": 25c3cf8af2d30b9cc176b36f2a78344ba9ae18f1
-  "feh-icons.tar.bz2": 9be61710c2f17a1247afbaaa5285114fd4e8cc51
+  feh-2.8.tar.bz2: eeb251d5971cf07e632661ef0b514fc3b0c7aca6
+  feh-icons.tar.bz2: 9be61710c2f17a1247afbaaa5285114fd4e8cc51
