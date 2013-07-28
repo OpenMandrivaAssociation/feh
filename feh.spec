@@ -1,6 +1,6 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        2.8
+Version:        2.9.3
 Release:        1
 License:        MIT
 Group:          Graphics
@@ -25,7 +25,7 @@ docs/homepage.
 
 %build
 %setup_compile_flags
-%make PREFIX=/usr
+%make PREFIX=/usr CC=%{__cc}
 
 %install
 %makeinstall_std PREFIX=%{_prefix}
@@ -39,7 +39,7 @@ Exec=%{name} -c
 Icon=%{name}
 Terminal=false
 Type=Application
-Categories=X-MandrivaLinux-Multimedia-Graphics;
+Categories=X-OpenMandrivaLinux-Multimedia-Graphics;
 EOF
 
 %__install -D -m 644 %{name}-48.png %{buildroot}%{_liconsdir}/%{name}.png
