@@ -1,7 +1,7 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
 Version:        2.9.3
-Release:        1
+Release:        2
 License:        MIT
 Group:          Graphics
 URL:            https://derf.homelinux.org/projects/feh/
