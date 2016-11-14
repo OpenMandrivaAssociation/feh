@@ -1,7 +1,7 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        2.9.3
-Release:        2
+Version:        2.18
+Release:        1
 License:        MIT
 Group:          Graphics
 URL:            https://derf.homelinux.org/projects/feh/
@@ -22,6 +22,7 @@ docs/homepage.
 %prep
 %setup -q
 %setup -q -T -D -a1
+find . -perm 0600 | xargs chmod 0644
 
 %build
 %setup_compile_flags
@@ -53,7 +54,7 @@ rm -rf %{buildroot}%{_docdir}%{name}
 %defattr(0755,root,root,0755)
 %{_bindir}/*
 %defattr(0644,root,root,0755)
-%doc AUTHORS ChangeLog README TODO examples
+%doc AUTHORS ChangeLog TODO examples
 %{_datadir}/%{name}/fonts/*
 %{_datadir}/%{name}/images/*
 %{_mandir}/man1/*
@@ -61,3 +62,5 @@ rm -rf %{buildroot}%{_docdir}%{name}
 %{_iconsdir}/%{name}.png
 %{_liconsdir}/%{name}.png
 %{_datadir}/applications/*
+%{_datadir}/icons/hicolor/48x48/apps/%{name}.png
+%{_datadir}/icons/hicolor/scalable/apps/%{name}.svg
