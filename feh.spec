@@ -1,6 +1,6 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:        2.18
+Version:	3.1.3
 Release:        1
 License:        MIT
 Group:          Graphics
@@ -22,7 +22,6 @@ docs/homepage.
 %prep
 %setup -q
 %setup -q -T -D -a1
-find . -perm 0600 | xargs chmod 0644
 
 %build
 %setup_compile_flags
