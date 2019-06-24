@@ -53,7 +53,7 @@ rm -rf %{buildroot}%{_docdir}%{name}
 %defattr(0755,root,root,0755)
 %{_bindir}/*
 %defattr(0644,root,root,0755)
-%doc AUTHORS ChangeLog TODO examples
+%doc README.md AUTHORS ChangeLog TODO examples
 %{_datadir}/%{name}/fonts/*
 %{_datadir}/%{name}/images/*
 %{_mandir}/man1/*
