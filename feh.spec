@@ -1,6 +1,6 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:	3.2.1
+Version:	3.3
 Release:	1
 License:        MIT
 Group:          Graphics
@@ -25,10 +25,10 @@ docs/homepage.
 
 %build
 %setup_compile_flags
-%make PREFIX=/usr CC=%{__cc}
+%make_build PREFIX=/usr CC=%{__cc}
 
 %install
-%makeinstall_std PREFIX=%{_prefix}
+%make_install PREFIX=%{_prefix}
 
 mkdir -p %{buildroot}%{_datadir}/applications
 cat > %{buildroot}%{_datadir}/applications/mandriva-%{name}.desktop << EOF
