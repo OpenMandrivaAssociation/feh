@@ -1,6 +1,6 @@
 Summary:        Image viewer at heart, though it does other cool stuff
 Name:           feh
-Version:	3.5
+Version:	3.6.1
 Release:	1
 License:        MIT
 Group:          Graphics
@@ -8,11 +8,15 @@ URL:            https://derf.homelinux.org/projects/feh/
 Source0:	http://feh.finalrewind.org/%{name}-%{version}.tar.bz2
 Source1:        %{name}-icons.tar.bz2
 
-Buildrequires:  imlib2-devel libxt-devel libxinerama-devel
-Buildrequires:  giblib-devel
-Buildrequires:  jpeg-devel 
-BuildRequires:  png-devel
-BuildRequires:  curl-devel
+BuildRequires:  pkgconfig(imlib2)
+BuildRequires:  pkgconfig(xt)
+BuildRequires:  pkgconfig(xinerama)
+BuildRequires:  pkgconfig(giblib)
+BuildRequires:  jpeg-devel
+BuildRequires:  jpeg-progs
+BuildRequires:  pkgconfig(libpng)
+BuildRequires:  pkgconfig(libcurl)
+BuildRequires:  pkgconfig(libexif)
 
 %description
 Feh is an image viewer, but it does a whole lot of other cool stuff as
