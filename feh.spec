@@ -8,6 +8,7 @@ URL:            https://derf.homelinux.org/projects/feh/
 Source0:	http://feh.finalrewind.org/%{name}-%{version}.tar.bz2
 Source1:        %{name}-icons.tar.bz2
 
+BuildRequires:	make
 BuildRequires:  pkgconfig(imlib2)
 BuildRequires:  pkgconfig(xt)
 BuildRequires:  pkgconfig(xinerama)
